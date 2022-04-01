@@ -1,0 +1,157 @@
+//  ============================ Typography ============================
+
+// calc font size
+for $listTypeItem in $listType
+	.type--{$listTypeItem[0]},.type--{$listTypeItem[1]}
+		+below(768px)
+			font-size $listTypeItem[2] px
+		font-size $listTypeItem[1] px
+// calc font size === end
+
+// calc font weight
+for $listFwItem in $listFw
+	.type--{$listFwItem}
+		font-weight $listFwItem
+// calc font weight === end
+
+.type--mid
+	text-align center
+
+.type--left
+	text-align left
+
+.type--right
+	text-align right
+
+.type--ws
+	white-space nowrap
+
+.type--line
+	text-decoration: line-through
+
+h5
+	@extend .type--sm
+h4
+	@extend .type--main
+h3
+	@extend .type--md
+h2
+	@extend .type--lg
+h1
+	@extend .type--xl
+
+// link
+a
+	color $linkColor
+	text-decoration: none
+	tr()
+	&:hover
+		color darken($linkColor,20)
+	&:visiter
+		color darken($linkColor,30)
+
+.link
+	cp()
+	transition color .4s
+	color $link-color
+	&:hover
+		color $mark
+	&:visiter
+		color $mark
+
+.link--mark
+	color $mark
+	&:hover
+		color darken($mark,20)
+	&:visiter
+		color darken($mark,30)
+
+.link--main
+	color $linkColor
+	hover-underline($linkColor)
+	&:hover
+		color darken($linkColor,20)
+	&:visiter
+		color darken($linkColor,30)
+
+.link--text
+	color $linkColor
+	text-decoration underline
+	&:hover
+		text-decoration none
+// link === end
+
+p
+	@extend .type--main
+
+.text
+	color $typeMain
+	h1,h2,h3,h4,h5
+		margin 3.5rem 0 2rem
+	h1:first-of-type,
+	h2:first-of-type,
+	h3:first-of-type,
+	h4:first-of-type,
+	h5:first-of-type,
+	h6:first-of-type,
+	p
+		margin-top: 0!important
+	a:not(.btn--md):not(.btn--sm)
+		@extend .link--mark
+	//img
+		//@extend .m-64
+	p
+		line-height: 1.6
+		margin-bottom: 30px
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+	ul
+		margin-bottom: 30px
+		padding-left 26px
+		list-style none
+		&:first-child
+			margin-top: 0
+		li
+			line-height: 1.6
+			margin-bottom: 16px
+			position relative
+			//font-weight: 700
+			&:before
+				content ''
+				position absolute
+				size 12px
+				round()
+				border 2px solid $mark
+				left -26px
+				top 6px
+			&:last-child
+				margin-bottom: 0
+
+
+// calc icon size
+for $listIconItem in $listIcon
+	.icon--{$listIconItem[1]}
+		width $listIconItem[1] px
+		height $listIconItem[1] px
+		min-width $listIconItem[1] px
+		img
+			width: 100%
+	.icon--{$listIconItem[0]}
+		width $listIconItem[1] px
+		height $listIconItem[1] px
+		min-width $listIconItem[1] px
+		img
+			width: 100%
+	for $windowSizeItem in $windowSize
+		.{$windowSizeItem[0]}__icon--{$listIconItem[1]}
+			@media only screen and (max-width: $windowSizeItem[1]px)
+				width $listIconItem[1] px
+				height $listIconItem[1] px
+				min-width $listIconItem[1] px
+				img
+					width: 100%
+// calc icon size === end
+
+

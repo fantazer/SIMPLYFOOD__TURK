@@ -1,0 +1,43 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.bg--snow.f.f-mid
+		.pt-80.pb-80.w100.psh-10
+			.contract-box.contract-box--sm.br--20.bg--white
+				.f.f-mid
+					+icon("sendMsg","icon icon--xl icon--mark mb-24")
+				.type--xl.type--700.mb-20.type--mid sipariş için teşekkürler
+				.type--md.mb-20.type--mid.type--typePrimary.mb-36 Operatör kısa süre içinde sizinle iletişime geçecektir.
+				.f.f-mid
+					a(href="/").btn.btn--md.btn--mark Ana sayfaya dön
+
+					//.f.f-jcsb.mb-20
+						.w35.type--main Address
+						.w65.type--main.type--right.type--typeSecondary ул. Зеленоградская, 4/7
+					//.f.f-jcsb.mb-20
+						.type--main Phone
+						.type--main.type--right.type--typeSecondary +7 (980) 987-67-76
+					//.f.f-jcsb.mb-20
+						.type--main Email
+						.type--main.type--right.type--typeSecondary igerigrg@gmail.com
+
+					//.line.mt-32.mb-32.bg--snow
+
+					//.f.f-jcsb.mb-20
+						.type--main Weekly Subscription
+						.type--md.type--right.type--700 £ 110.28
+					//.f.f-jcsb.mb-20
+						.type--main Delivery
+						.type--md.type--right.type--700 £ 35.15
+
+					//.line.mt-32.mb-32.bg--snow
+
+					//.f.f-jcsb.mb-20
+						.type--md.type--700 Total
+						.type--mdx.type--right.type--700 £ 145.43
+
+	+footer()
+	+modal()
+include ./block_html/_script.pug

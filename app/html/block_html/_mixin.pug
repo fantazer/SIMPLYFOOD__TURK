@@ -1,0 +1,29 @@
+mixin icon(name,cls)
+  svg(class=cls)
+    use(xlink:href="#" + name)
+
+mixin checkbox(text,checked,className)
+  .check-el
+    label.style-label.style-label--checkbox(class = className )
+      input(type="checkbox" checked=checked  ? checked : false).style-input
+      .style-input-element
+        +icon("checked","icon")
+      .style-input-text !{text}
+
+
+mixin radio(text,group,checked,className)
+  .check-el
+    label.style-label.style-label--radio(class = className)
+      input(type="radio" name=group checked=checked  ? checked : false).style-input
+      .style-input-element
+        .icon-radio
+      .style-input-text=text
+
+mixin incr(state,className, min)
+  .incr.js-incr-wrap(class= className data-min=min)
+    .incr-nav.js-inc-nav.js-inc-nav--minus
+      +icon("minus","icon")
+    .incr-val
+      span.js-incr-val=state ? state : 0
+    .incr-nav.js-inc-nav.js-inc-nav--plus
+      +icon("plus","icon")

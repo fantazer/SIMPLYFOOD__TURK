@@ -1,0 +1,51 @@
+mixin header()
+	//block header
+	.header-wrap
+		.main-cont
+			.header
+				a(href="/").logo
+					img(src="img/logo.svg", alt="")
+				.header-nav
+					-
+						var items = [
+							{name: "Avantajlar", id: "/#navAdvantages"},
+							{name: "Menü", id: "/#navMenu"},
+							{name: "Test haftası", id: "/#navTrial"},
+							{name: "Nasıl Çalışır", id: "/#navHow"},
+							{name: "Yorumlar", id: "/#navReview"},
+							{name: "Soru Cevap Listesi", id: "/#navFaq"},
+							{name: "Teslimat", id: "/#navDelivery"},
+						];
+					each item in items
+						a(href=item.id).header-nav__el.js-scroll-to #{item.name}
+				.head-toggle.js-slide-block-toggle(data-menu="menu")
+					+icon("menu","icon icon-open")
+					+icon("close","icon icon-close")
+	// mobile menu
+	.slide-block.slide-block--right.slide-block--menu(data-menu="menu")
+		.slide-block-wrap.js-accordion
+			.slide-nav
+				-
+					var items = [
+						{name: "Avantajlar", id: "/#navAdvantages"},
+						{name: "Menü", id: "/#navMenu"},
+						{name: "Test haftası", id: "/#navTrial"},
+						{name: "Nasıl Çalışır", id: "/#navHow"},
+						{name: "Yorumlar", id: "/#navReview"},
+						{name: "Soru Cevap Listesi", id: "/#navFaq"},
+						{name: "Teslimat", id: "/#navDelivery"},
+					];
+				each item in items
+					a(href = item.id).type--700.js-scroll-to.db.mb-24 #{item.name}
+
+				-
+					var items = [
+						'Terms of use',
+						'Cookie Policy',
+						'Privacy Policy',
+						'Terms & Conditions',
+						];
+				//each item in items
+					a(href="#").type--700.db.mb-24.type--typeSecondary #{item}
+
+	//block header end

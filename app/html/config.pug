@@ -1,0 +1,138 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.bg--snow
+		.pt-80.pb-80
+			.main-cont
+				.contract-box.br--20.bg--white
+					.type--xl.type--800.mb-48.type--mid Adjust your diet
+					.type--lg.type--700.mb-20.type--mid Exclusions
+					.f.f-mid
+						.wmax-500
+							.text.mb-20.type--mid
+								p.type--sm We cater to your specific needs.<br> You can select up to 2 , so let us know of any allergies or intolerances below - please note we are already 100% Gluten free.
+							.input-row.mb-48
+								input(type="text"  class="input")
+
+					.type--lg.type--700.mb-20.type--mid Choose your meals
+					.type--md.type--700.mb-20.type--mid How many meals per day?
+					.g.g-3.sm__g-2.gap-40.js-tick-cont.mb-48
+						.contract-el.active.js-tick
+							.contract-el__val 2
+							.contract-el__title meals/day
+						.contract-el.js-tick
+							.contract-el__val 3
+							.contract-el__title.mb-4 meals/day
+							.contract-el__descr invludes breackfast
+						.contract-el.js-tick
+							.contract-el__val 4
+							.contract-el__title.mb-4 meals/day
+							.contract-el__descr invludes breackfast
+
+					.type--md.type--700.mb-20.type--mid How many days per week?
+					.g.g-4.sm__g-2.gap-40.js-tick-cont.mb-48
+						.contract-el.active.js-tick
+							.contract-el__val 3
+							.contract-el__title meals/day
+						.contract-el.js-tick
+							.contract-el__val 4
+							.contract-el__title.mb-4 meals/day
+						.contract-el.js-tick
+							.contract-el__val 5
+							.contract-el__title.mb-4 meals/day
+						.contract-el.js-tick
+							.contract-el__val 6
+							.contract-el__title.mb-4 meals/day
+
+					.type--md.type--700.mb-20.type--mid Which four days will you eat your Universe5 meals?
+					.g.g-6.md__g-3.sm__g-2.mb-48.gap-24
+						-
+							var items = [
+								'Sunday',
+								'Monday',
+								'Tuesday',
+								'Wednesday',
+								'Thursday',
+								'Friday',
+								];
+						each item,i in items
+							.contract-el.js-toggle(class=i===2?'active':'')
+								.contract-el__title #{item}
+					.contract-state-row
+						.contract-state-row__val
+							.type--lg.type--700 15
+						.contract-state-row__descr
+							.type--typeSecondary.type--700 Total meals/week
+					.contract-state-row
+						.contract-state-row__val
+							.type--lg.type--700 £ 9.03
+						.contract-state-row__descr
+							.type--typeSecondary.type--700 Average price/meal
+
+					.line.mt-48.mb-48.bg--snow
+
+					.type--lg.type--700.mb-20.type--mid Choose duration
+					.type--md.type--700.mb-20.type--mid Subscribe for longer for even better value
+					.g.g-4.sm__g-2.gap-40.js-tick-cont.mb-48
+						.contract-el.active.js-tick
+							.contract-el__val 2
+							.contract-el__title days/week
+						.contract-el.js-tick
+							.contract-el__val 3
+							.contract-el__title weeks
+						.contract-el.js-tick
+							.contract-el__val 8
+							.contract-el__title weeks
+						.contract-el.js-tick
+							.contract-el__val 12
+							.contract-el__title weeks
+
+					.line.mt-48.mb-48.bg--snow
+
+					.contract-state-row.mb-20
+						.contract-state-row__val
+							.type--mdx.type--700 3 meals/day
+						.contract-state-row__descr
+							.type--typeSecondary.type--700 Meals
+
+					.contract-state-row.mb-20
+						.contract-state-row__val
+							.type--mdx.type--700 5 days/week
+						.contract-state-row__descr
+							.type--typeSecondary.type--700 Days
+
+					.contract-state-row
+						.contract-state-row__val
+							.type--mdx.type--700 8 weeks
+						.contract-state-row__descr
+							.type--typeSecondary.type--700 Duration
+
+					.line.mt-48.mb-48.bg--snow
+
+					.contract-state-row.mb-20
+						.contract-state-row__val
+							.type--mdx.type--700 £ 9.19
+						.contract-state-row__descr
+							.type--typeSecondary.type--700 Price per Meal
+							.type--typeSecondary Longer subscription, better value
+
+					.contract-state-row.mb-20
+						.contract-state-row__val
+							.type--mdx.type--700 £ 0
+						.contract-state-row__descr
+							.type--typeSecondary.type--700 Discount
+
+					.contract-state-row.mb-48
+						.contract-state-row__val
+							.type--mdx.type--700 £ 110.28
+						.contract-state-row__descr
+							.type--typeSecondary.type--700 Weekly Subscription
+							.type--typeSecondary The convenience of weekly payments
+
+					.f.f-mid
+						.btn.btn--lg.btn--mark.btn--mobile Proceed to checkout
+	+footer()
+	+modal()
+include ./block_html/_script.pug

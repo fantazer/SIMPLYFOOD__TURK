@@ -1,0 +1,23 @@
+mixin footer()
+	//block footer
+	.footer-wrap
+		// footer top
+		.main-cont
+			.footer
+				a(href="/").footer-logo
+					img(src="img/logo--light.svg", alt="")
+				//.footer-nav
+					a(href="#").footer-nav__el Terms of use
+					a(href="#").footer-nav__el Cookie Policy
+					a(href="#").footer-nav__el Privacy Policy
+					a(href="#").footer-nav__el Terms & Conditions
+				.footer-politick © Her hakkı saklıdır
+				//.soc-row.soc-row--monochrome.soc-row--footer
+					a(href="#").soc-row__el
+						+icon("soc-inst","icon")
+					a(href="#").soc-row__el
+						+icon("soc-fb","icon")
+				a(href="#top").js-scroll-to.footer-scroll
+					+icon("arrow-up","icon")
+		// footer top === end
+	//block footer end

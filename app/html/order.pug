@@ -1,0 +1,88 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.bg--snow
+		.main-cont
+			form.pt-80.pb-80.js-validate(
+				action="javascript:void(null);"
+				data-redirect_url="total.html"
+			)
+				.contract-box.br--20.bg--white
+					.type--xl.type--800.mb-48.type--mid Your subscription details
+					.type--lg.type--700.mb-20.type--mid Your personal details
+					.g.g-2.sm__g-1.gap-32.mb-48
+						.input-row
+							input(
+								class="input js-input-data"
+								type="text"
+								name="name[1]"
+								placeholder="First name"
+								data-type="name"
+								data-condition="firstName"
+							)
+						.input-row
+							input(
+								class="input js-input-data"
+								type="text"
+								name="name[2]"
+								placeholder="Second name"
+								data-type="name"
+								data-condition="secondName"
+							)
+						.input-row
+							input(
+								class="input js-input-data"
+								type="tel"
+								name="phone[1]"
+								placeholder="Your phone"
+								data-type="phone"
+								data-condition="phone"
+								inputmode="numeric"
+							)
+
+					.type--lg.type--700.mb-20.type--mid Your delivery details
+					.input-row.mb-32
+						input(
+							class="input js-input-data"
+							type="text"
+							name="simpleText[1]"
+							placeholder="Your address"
+							data-type="simpleText"
+							data-condition="adress"
+						)
+
+
+					.type--mdx.type--700.mb-20.type--mid Non-contact deliveries will be made to the address above.
+					.wmax-640.ml-a.mr-a.mb-20
+						.type--main.type--mid If you are unable to take delivery personally please provide details of a safe place where our couriers can leave your Munchfit orders.
+					.input-row.mb-32
+						input(
+							class="input js-input-data"
+							type="text"
+							name="simpleText[2]"
+							placeholder="Safe Place Location"
+							data-condition="safePlace"
+						)
+					.input-row.mb-80
+						textarea(
+							class="input js-input-data"
+							cols="30"
+							rows="6"
+							data-condition="msg"
+							placeholder="Special Instructions"
+						)
+					.g.g-2.sm__g-1.gap-32.mb-48
+						.input-row
+							input(type="text"  class="input" placeholder="Referal code")
+						.input-row
+							input(type="text"  class="input" placeholder="Discount code")
+					.mb-48
+						+checkbox('I accept the <a href="#">Terms and Conditions</a>')
+					.f.f-mid
+						button(type="submit").btn.btn--lg.btn--mark.btn--mobile Proceed to Payment
+
+	+footer()
+	+modal()
+include ./block_html/_script.pug

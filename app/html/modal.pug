@@ -1,0 +1,35 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+style(type='text/css').
+	.btn-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		flex-flow: column;
+		align-items: baseline;
+	}
+	.btn-wrap .btn--md {
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+
+	@media only screen and (max-width: 640px) {
+		.btn-wrap .btn--md{
+			width: 100%;
+		}
+	}
+
+.page
+	+header()
+	.content.pt-80.pb-80
+		.main-cont
+			p Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"
+			p Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send
+			.btn-wrap
+				.btn.btn--md.btn--mark.js-modal(data-modal="postCode") Check we can deliver | data-modal="postCode "
+				.btn.btn--md.btn--mark.js-modal(data-modal="subscribe") Phone subscribe | data-modal="subscribe "
+
++footer()
++modal()
+
+include ./block_html/_script.pug

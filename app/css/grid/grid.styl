@@ -1,0 +1,230 @@
+@import '../variable/config/_config.styl'
+
+// Flex-wrap
+/*for $windowSizeItem in $windowSize
+	.{$windowSizeItem[0]}__fw
+		@media only screen and (max-width: $windowSizeItem[1]px)
+			flex-wrap wrap*/
+// Flex-wrap  === end
+
+// Flex order
+for $item in (1..8)
+	.order-{$item}
+		order $item
+	for $windowSizeItem in $windowSize
+		.{$windowSizeItem[0]}__order-{$item}
+			@media only screen and (max-width: $windowSizeItem[1]px)
+				order $item
+// Flex order === end
+
+//START GRID
+$gridList = (1..12)
+
+for $gridListItem in $gridList
+	.g-{$gridListItem}
+		grid-template-columns: repeat($gridListItem, 1fr)
+	for $windowSizeItem in $windowSize
+		.{$windowSizeItem[0]}__g-{$gridListItem}
+			@media only screen and (max-width: $windowSizeItem[1]px)
+					grid-template-columns: repeat($gridListItem, 1fr)
+
+.row
+	display: grid
+	grid-template-columns: repeat(12, 1fr)
+
+for num in (1..12)
+	for numEl in (1..12)
+		.g-{num}-{numEl}
+			grid-column num / numEl + 1
+
+for $windowSizeItem in $windowSize
+	for num in (1..12)
+		for numEl in (1..12)
+			.{$windowSizeItem[0]}__g-{num}-{numEl}
+				@media only screen and (max-width: $windowSizeItem[1]px)
+					grid-column num / numEl+1
+// END GRID
+
+// calc gap
+gap($gapVal)
+	margin-top: "calc(-1 * (%s))" % $gapVal
+	margin-left: "calc(-1 * (%s))" % $gapVal
+	//width: "calc(100% + (%s))" % $gapVal
+	&>*
+		margin-top: $gapVal
+		margin-left: $gapVal
+
+calcGap(size1, size2, size3)
+	gap(size1 px)
+	if size2
+		+below(1024px)
+			gap(size2 px)
+	if size3
+		+below(640px)
+			gap(size3 px)
+
+calcGridGap(size1, size2, size3)
+	grid-gap size1 px
+	if size2
+		+below(1024px)
+			grid-gap size2 px
+	if size3
+		+below(640px)
+			grid-gap size3 px
+
+
+for $gridGapItem in $gridGap
+	.gap-{$gridGapItem}
+		calcGap($gridGapItem[0], $gridGapItem[1], $gridGapItem[2])
+
+for $gridGapItem in $gridGap
+	.g-gap-{$gridGapItem}
+		calcGridGap($gridGapItem[0], $gridGapItem[1], $gridGapItem[2])
+
+for $gridGapItem in $gridGap
+	.g-c-gap-{$gridGapItem}
+		grid-column-gap $gridGapItem[0]px
+
+// === gap === end
+
+
+// calc width
+for itemWidth in (1..20)
+	.w{itemWidth*5}
+		width (itemWidth*5) %
+	for $windowSizeItem in $windowSize
+		.{$windowSizeItem[0]}__w{itemWidth*5}
+			@media only screen and (max-width: $windowSizeItem[1]px)
+					width (itemWidth*5) %
+
+for itemListWmax in $listWmax
+	.wmax-{itemListWmax}
+		max-width itemListWmax px
+		width: 100%
+	for $windowSizeItem in $windowSize
+		.{$windowSizeItem[0]}__wmax-{itemListWmax}
+			@media only screen and (max-width: $windowSizeItem[1]px)
+					max-width itemListWmax px
+					width: 100%
+
+for itemListWmin in $listWmin
+	.wmin-{itemListWmin}
+		min-width itemListWmin px
+		width: 100%
+	for $windowSizeItem in $windowSize
+		.{$windowSizeItem[0]}__wmin-{itemListWmin}
+			@media only screen and (max-width: $windowSizeItem[1]px)
+					min-width itemListWmin px
+					width: 100%
+
+.h100
+	height: 100%
+// calc width === end
+
+// Visible mobile
+for $windowSizeItem in $windowSize
+	.{$windowSizeItem[0]}__hide
+		@media only screen and (max-width: $windowSizeItem[1]px)
+			display none!important
+	.{$windowSizeItem[0]}__show
+		@media only screen and (min-width: ($windowSizeItem[1]+1)px)
+			display none!important
+// Visible mobile === end
+
+
+// Flex state items
+$flexState = ("f-aic" "align-items" center),\
+							("f-aife" "align-items" flex-end),\
+							("f-aifs" "align-items" flex-start),\
+							("f-asfs" "align-self" flex-start),\
+							("f-asfe" "align-self" flex-end),\
+							("f-asc" "align-self" center),\
+							("f-jcsb" "justify-content" space-between),\
+							("f-jcc" "justify-content" center),\
+							("f-jcsa" "justify-content" space-around),\
+							("f-jcfe" "justify-content" flex-end),\
+							("f-jcfs" "justify-content" flex-start),\
+							("f-grow" "flex-grow" 1),\
+							("fw" "flex-wrap" wrap),\
+							("f-column" "flex-direction" column),\
+							("f-row" "flex-direction" row)
+
+for $flexStateItem in $flexState
+	.{$flexStateItem[0]}
+		{$flexStateItem[1]} $flexStateItem[2]
+	for $windowSizeItem in $windowSize
+		.{$windowSizeItem[0]}__{$flexStateItem[0]}
+			@media only screen and (max-width: $windowSizeItem[1]px)
+				{$flexStateItem[1]} $flexStateItem[2]
+// Flex state items === end
+
+// Display
+.f-mid
+	align-items center
+	justify-content center
+
+.f-between
+	align-items center
+	justify-content space-between
+
+.g-inline
+	display: inline-grid
+
+.g-afc
+	grid-auto-flow column
+
+.g-afr
+	grid-auto-flow row
+
+.g-between
+	justify-content space-between
+	align-items center
+	flex-wrap wrap
+
+generateStyle(generateStyleItem)
+	for $displayItem in generateStyleItem
+		.{$displayItem[0]}
+			{$displayItem[1]} $displayItem[2]
+		for $windowSizeItem in $windowSize
+			.{$windowSizeItem[0]}__{$displayItem[0]}
+				@media only screen and (max-width: $windowSizeItem[1]px)
+					{$displayItem[1]} $displayItem[2]
+
+
+$display = ("f" "display" flex),\
+						("g" "display" grid),\
+						("g-afc" "grid-auto-flow" column),\
+						("g-afr" "grid-auto-flow" row),\
+						("dif" "display" inline-flex),\
+						("dig" "display" inline-grid),\
+						("db" "display" block),\
+						("di" "display" inline),\
+						("dib" "display" inline-block)
+
+$position = ("pos-r" "position" relative),\
+						("pos-a" "position" absolute),\
+						("pos-s" "position" static),\
+						("pos-f" "position" fixed)
+
+$objectFit = ("obj-f" "object-fit" fill),\
+							("obj-c" "object-fit" contain),\
+							("obj-cov" "object-fit" cover),\
+							("obj-none" "object-fit" none)
+
+$objectPosition = ("obj-pos-t" "object-position" top),\
+							("obj-pos-r" "object-position" right),\
+							("obj-pos-b" "object-position" bottom),\
+							("obj-pos-left" "object-position" left)
+
+generateStyle($display)
+generateStyle($position)
+generateStyle($objectFit)
+generateStyle($objectPosition)
+// Display === end
+
+// z-index
+for $listZindexItem in $listZindex
+	.z{$listZindexItem}
+		z-index $listZindexItem
+
+// z-index === end

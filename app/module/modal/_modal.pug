@@ -1,0 +1,67 @@
+mixin modal()
+	// init
+	.modal-layer
+		.modal-filter
+		.modal-wrap
+			.modal(data-modal="postCode")
+				.modal-content
+					.modal-close.js-modal-close
+						+icon("close","icon")
+					.type--lg.type--700.mb-16.type--mid Check we can deliver
+					.type--main.type--mid.mb-24 Please enter your delivery postcode below to check if we deliver to your area.
+					.input-row.mb-20
+						input(type="text" placeholder="Postcode" class="input")
+					.btn.btn--md.btn--mark.btn--full Teslim et
+			.modal(data-modal="subscribe")
+				.modal-close.js-modal-close
+					+icon("close","icon")
+				.modal-content
+					.f.f-mid
+						+icon("sendMsg","icon icon--xl icon--mark mb-24")
+					.type--lg.type--700.mb-16.type--mid Teşekkürler
+					.type--main.type--mid.mb-24 Operatör kısa süre içinde sizinle iletişime geçecektir.
+					.btn.btn--md.btn--mark.btn--full.js-modal-close Teslim et
+			-
+				var items = [
+					{
+						"modal": "Organic",
+						"title": "Organik Malzemeler",
+						"content": "Doğal lezzetinde, katkısız çiftlik ürünleri. Tüm yemekler, koruyucu, trans yağ veya kimyasal madde içermeyen doğal malzemeler kullanılarak hazırlanmıştır.",
+					},
+					{
+						"modal": "Cooking",
+						"title": "Yemek pişirmede yenilik",
+						"content": "Buharda ve fırında pişirme yöntemi, Hayati önem taşıyan tüm vitamin ve mineralleri koruyarak doğal ürünlerin lezzetini olabildiğince doğru korumamızda yardımcı  olmaktadır.",
+					},
+					{
+						"modal": "Avoid",
+						"title": "Abur cubur ürünlerden uzak durun",
+						"content": "Pişirme işleminde kızartma yağı veya zararlı sosları   kullanmıyoruz. Ayrıca rafine malzemeler; beyaz un, gıda boyaları ve aroma maddeleri de kullanılmamaktadır.",
+					},
+					{
+						"modal": "Nutrient",
+						"title": "Besin açısından zengin yiyecekler",
+						"content": "Besin açısından zengin bütün gıdaları kullanıyoruz",
+					},
+					{
+						"modal": "Biodegradable",
+						"title": "Biyolojik olarak çözünebilen, mısır nişastasından üretilmiş kaplar kullanıyoruz",
+						"content": "Biyolojik olarak çözünebilen, mısır nişastasından üretilmiş kaplar kullanıyoruz",
+					},
+					{
+						"modal": "Improve",
+						"title": "Sağlığınızı iyileştirin",
+						"content": "Sağlığınızı geliştiren günlük besini sağlamaktayız",
+					},
+
+				];
+			each item in items
+				.modal(data-modal=item.modal)
+					.modal-close.js-modal-close
+						+icon("close","icon")
+					.modal-content
+						.type--lg.type--700.mb-16=item.title
+						.type--main.mb-24=item.content
+						.btn.btn--md.btn--mark.btn--full.js-modal-close Teslim et
+	//.js-modal Открыть модальное окно
+

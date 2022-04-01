@@ -1,0 +1,50 @@
+//build:js ./js/combined.js
+script(src='bower/jquery/dist/jquery.js')
+script(src='bower/slick-carousel/slick/slick.js')
+script(src="bower/page-scroll-to-id/jquery.malihu.PageScroll2id.js")
+script(src="bower/jquery-validation/dist/jquery.validate.min.js")
+// endbuild
+script(src="./js/add-on.js")
+script(src="./js/script.js#4523")
+script(src="./js/script-edit.js")
+
+script.
+	!function (f, b, e, v, n, t, s) {
+		if (f.fbq) return;
+		n = f.fbq = function () {
+			n.callMethod ?
+				n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+		};
+		if (!f._fbq) f._fbq = n;
+		n.push = n;
+		n.loaded = !0;
+		n.version = '2.0';
+		n.queue = [];
+		t = b.createElement(e);
+		t.async = !0;
+		t.src = v;
+		s = b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t, s)
+	}(window, document, 'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '1027151093992756');
+	fbq('track', 'PageView');
+
+noscript.
+	<img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=1027151093992756&ev=PageView&noscript=1"/>
+
+script(async src="https://www.googletagmanager.com/gtag/js?id=UA-221371032-1")
+
+script.
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-221371032-1');
+
+
+</body>
+</html>

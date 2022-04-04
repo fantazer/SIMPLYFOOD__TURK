@@ -10,15 +10,15 @@ include block_html/_include.pug
 				data-redirect_url="total.html"
 			)
 				.contract-box.br--20.bg--white
-					.type--xl.type--800.mb-48.type--mid Your subscription details
-					.type--lg.type--700.mb-20.type--mid Your personal details
+					.type--xl.type--800.mb-48.type--mid Abonelik Detaylarınız
+					.type--lg.type--700.mb-20.type--mid Kişisel bilgileriniz
 					.g.g-2.sm__g-1.gap-32.mb-48
 						.input-row
 							input(
 								class="input js-input-data"
 								type="text"
 								name="name[1]"
-								placeholder="First name"
+								placeholder="Adınız"
 								data-type="name"
 								data-condition="firstName"
 							)
@@ -27,7 +27,7 @@ include block_html/_include.pug
 								class="input js-input-data"
 								type="text"
 								name="name[2]"
-								placeholder="Second name"
+								placeholder="Soyadınız"
 								data-type="name"
 								data-condition="secondName"
 							)
@@ -36,33 +36,33 @@ include block_html/_include.pug
 								class="input js-input-data"
 								type="tel"
 								name="phone[1]"
-								placeholder="Your phone"
+								placeholder="Telefon numaranız"
 								data-type="phone"
 								data-condition="phone"
 								inputmode="numeric"
 							)
 
-					.type--lg.type--700.mb-20.type--mid Your delivery details
+					.type--lg.type--700.mb-20.type--mid Teslimat detaylarınız
 					.input-row.mb-32
 						input(
 							class="input js-input-data"
 							type="text"
 							name="simpleText[1]"
-							placeholder="Your address"
+							placeholder="Adres"
 							data-type="simpleText"
 							data-condition="adress"
 						)
 
 
-					.type--mdx.type--700.mb-20.type--mid Non-contact deliveries will be made to the address above.
+					.type--mdx.type--700.mb-20.type--mid Temassız teslimatlar yukarıdaki adrese yapılacaktır.
 					.wmax-640.ml-a.mr-a.mb-20
-						.type--main.type--mid If you are unable to take delivery personally please provide details of a safe place where our couriers can leave your Munchfit orders.
+						.type--main.type--mid Teslimatı kişisel olarak alamıyorsanız, lütfen kuryelerimizin Munchfit siparişlerinizi bırakabileceği güvenli bir yerin ayrıntılarını bildirin.
 					.input-row.mb-32
 						input(
 							class="input js-input-data"
 							type="text"
 							name="simpleText[2]"
-							placeholder="Safe Place Location"
+							placeholder="Güvenli yer konumu"
 							data-condition="safePlace"
 						)
 					.input-row.mb-80
@@ -71,17 +71,17 @@ include block_html/_include.pug
 							cols="30"
 							rows="6"
 							data-condition="msg"
-							placeholder="Special Instructions"
+							placeholder="Özel Talimatlar"
 						)
 					.g.g-2.sm__g-1.gap-32.mb-48
 						.input-row
-							input(type="text"  class="input" placeholder="Referal code")
+							input(type="text"  class="input" placeholder="Yönlendirme Kodu")
 						.input-row
-							input(type="text"  class="input" placeholder="Discount code")
+							input(type="text"  class="input" placeholder="İndirim kodu")
 					.mb-48
-						+checkbox('I accept the <a href="#">Terms and Conditions</a>')
+						+checkbox('Bütün şartları ve koşulları okudum kabul ediyorum')
 					.f.f-mid
-						button(type="submit").btn.btn--lg.btn--mark.btn--mobile Proceed to Payment
+						button(type="submit").btn.btn--lg.btn--mark.btn--mobile ödemeyi gerçekleştir
 
 	+footer()
 	+modal()

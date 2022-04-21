@@ -49,7 +49,7 @@ $(document).ready(function () {
 	'use strict';
 
 	var file = 'img/pack.html',
-		revision = 15032021;
+		revision = 16032022;
 
 	if (!document.createElementNS || !document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect)
 		return true;

@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 51.2em 1243.3em;
+    background-size: 51.2em 1263.3em;
 }
 
 .no-svg .icon:before {
@@ -674,8 +674,17 @@
 
 
 
-  .icon.strong:before {
+  .icon.step--color:before {
       background-position: 0em -1119.3em;
+      width: 10em;
+      height: 10em;
+  }
+
+
+
+
+  .icon.strong:before {
+      background-position: 0em -1129.3em;
       width: 4.8em;
       height: 4.8em;
   }
@@ -684,7 +693,7 @@
 
 
   .icon.tick--color:before {
-      background-position: 0em -1124.1em;
+      background-position: 0em -1134.1em;
       width: 51.2em;
       height: 51.2em;
   }
@@ -693,7 +702,7 @@
 
 
   .icon.transport:before {
-      background-position: 0em -1175.3em;
+      background-position: 0em -1185.3em;
       width: 2.4em;
       height: 2.4em;
   }
@@ -702,7 +711,7 @@
 
 
   .icon.upload:before {
-      background-position: 0em -1177.7em;
+      background-position: 0em -1187.7em;
       width: 51.2em;
       height: 51.2em;
   }
@@ -711,7 +720,7 @@
 
 
   .icon.user:before {
-      background-position: 0em -1228.9em;
+      background-position: 0em -1238.9em;
       width: 1.9738em;
       height: 1.9738em;
   }
@@ -720,7 +729,7 @@
 
 
   .icon.view:before {
-      background-position: 0em -1230.9em;
+      background-position: 0em -1240.9em;
       width: 2.4em;
       height: 2.4em;
   }
@@ -728,8 +737,17 @@
 
 
 
+  .icon.winner--color:before {
+      background-position: 0em -1243.3em;
+      width: 10em;
+      height: 10em;
+  }
+
+
+
+
   .icon.winner-step--color:before {
-      background-position: 0em -1233.3em;
+      background-position: 0em -1253.3em;
       width: 10em;
       height: 10em;
   }

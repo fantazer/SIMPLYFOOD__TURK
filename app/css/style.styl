@@ -322,6 +322,8 @@ body
 	width: 200px
 
 .header-nav
+	+below(1378px)
+		width: 65%
 	+below(1023px)
 		display none
 	flex(between)
@@ -333,6 +335,7 @@ body
 		font-size: 16px
 	@extend .link
 	font-weight: 700
+	white-space nowrap
 // header === end
 
 // main-banner
@@ -340,9 +343,8 @@ body
 	background: $green
 	overflow: hidden
 .main-banner
-	+below(1200px)
-		height calc(100vh - 60px)
 	+below(768px)
+		height calc(100vh - 60px)
 		fl()
 	//height calc(100vh - 100px)
 
@@ -357,30 +359,32 @@ body
 		max-width 480px
 		margin-left auto
 		margin-right auto
-
+	padding: 40px 0
 .main-banner__img
 	+below(1300px)
 		width: 40%
 	+below(768px)
 		width: 100%
 		flex(mid)
-	+below(640px)
-		margin-bottom: -80px
 	width: 48%
 	f()
-	align-items: center
+	align-items: flex-end
 .main-banner__img-el
 	+below(1300px)
-		padding: 65%
-		background-position:40% center
+		padding: 45%
 	+below(768px)
 		background-size contain
 		width: 100%
 		background-position:center
-		padding: 60%
+		padding: 25%
+		margin-top: 0
+	+below(640px)
+		padding: 48%
 	bg-full()
+	background-size contain
 	width: 100%
-	padding: 44%
+	padding: 35%
+	margin-top: 40px
 .main-banner__cont
 	+below(1300px)
 		width: 60%

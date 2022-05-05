@@ -2271,6 +2271,10 @@ body > svg {
   fill: #7eca1d;
 }
 
+.bor--mark {
+  border-color: #7eca1d;
+}
+
 .bg--linkColor {
   background: #000;
 }
@@ -2281,6 +2285,10 @@ body > svg {
 
 .icon--linkColor {
   fill: #000;
+}
+
+.bor--linkColor {
+  border-color: #000;
 }
 
 .bg--gray {
@@ -2295,6 +2303,10 @@ body > svg {
   fill: #565762;
 }
 
+.bor--gray {
+  border-color: #565762;
+}
+
 .bg--grayLight {
   background: #c4c5cc;
 }
@@ -2305,6 +2317,10 @@ body > svg {
 
 .icon--grayLight {
   fill: #c4c5cc;
+}
+
+.bor--grayLight {
+  border-color: #c4c5cc;
 }
 
 .bg--snow {
@@ -2319,6 +2335,10 @@ body > svg {
   fill: #f1f2f6;
 }
 
+.bor--snow {
+  border-color: #f1f2f6;
+}
+
 .bg--white {
   background: #fff;
 }
@@ -2329,6 +2349,10 @@ body > svg {
 
 .icon--white {
   fill: #fff;
+}
+
+.bor--white {
+  border-color: #fff;
 }
 
 .bg--green {
@@ -2343,6 +2367,10 @@ body > svg {
   fill: #7eca1d;
 }
 
+.bor--green {
+  border-color: #7eca1d;
+}
+
 .bg--greenDark {
   background: #65a217;
 }
@@ -2353,6 +2381,10 @@ body > svg {
 
 .icon--greenDark {
   fill: #65a217;
+}
+
+.bor--greenDark {
+  border-color: #65a217;
 }
 
 .bg--greenLight {
@@ -2367,6 +2399,10 @@ body > svg {
   fill: #e6f2d6;
 }
 
+.bor--greenLight {
+  border-color: #e6f2d6;
+}
+
 .bg--blue {
   background: #0065bd;
 }
@@ -2377,6 +2413,10 @@ body > svg {
 
 .icon--blue {
   fill: #0065bd;
+}
+
+.bor--blue {
+  border-color: #0065bd;
 }
 
 .bg--blueLight {
@@ -2391,6 +2431,10 @@ body > svg {
   fill: #d4ebff;
 }
 
+.bor--blueLight {
+  border-color: #d4ebff;
+}
+
 .bg--sea {
   background: #1dd0c7;
 }
@@ -2401,6 +2445,10 @@ body > svg {
 
 .icon--sea {
   fill: #1dd0c7;
+}
+
+.bor--sea {
+  border-color: #1dd0c7;
 }
 
 .bg--seaLight {
@@ -2415,6 +2463,10 @@ body > svg {
   fill: #d5f9f7;
 }
 
+.bor--seaLight {
+  border-color: #d5f9f7;
+}
+
 .bg--red {
   background: #ff4f4f;
 }
@@ -2425,6 +2477,10 @@ body > svg {
 
 .icon--red {
   fill: #ff4f4f;
+}
+
+.bor--red {
+  border-color: #ff4f4f;
 }
 
 .bg--typeMain {
@@ -2439,6 +2495,10 @@ body > svg {
   fill: #000;
 }
 
+.bor--typeMain {
+  border-color: #000;
+}
+
 .bg--typePrimary {
   background: #5c5e6e;
 }
@@ -2449,6 +2509,10 @@ body > svg {
 
 .icon--typePrimary {
   fill: #5c5e6e;
+}
+
+.bor--typePrimary {
+  border-color: #5c5e6e;
 }
 
 .bg--typeSecondary {
@@ -2463,6 +2527,10 @@ body > svg {
   fill: #9699a8;
 }
 
+.bor--typeSecondary {
+  border-color: #9699a8;
+}
+
 .bg--typeDisable {
   background: #c8cad4;
 }
@@ -2473,6 +2541,10 @@ body > svg {
 
 .icon--typeDisable {
   fill: #c8cad4;
+}
+
+.bor--typeDisable {
+  border-color: #c8cad4;
 }
 
 .bg--fieldBackground {
@@ -2487,6 +2559,10 @@ body > svg {
   fill: #f1f2f6;
 }
 
+.bor--fieldBackground {
+  border-color: #f1f2f6;
+}
+
 .bg--stateErrorBG {
   background: #ffe1e6;
 }
@@ -2497,6 +2573,10 @@ body > svg {
 
 .icon--stateErrorBG {
   fill: #ffe1e6;
+}
+
+.bor--stateErrorBG {
+  border-color: #ffe1e6;
 }
 
 .bg--stateError {
@@ -2511,6 +2591,10 @@ body > svg {
   fill: #d00025;
 }
 
+.bor--stateError {
+  border-color: #d00025;
+}
+
 .bg--stateSuccessBG {
   background: #edfdd9;
 }
@@ -2521,6 +2605,10 @@ body > svg {
 
 .icon--stateSuccessBG {
   fill: #edfdd9;
+}
+
+.bor--stateSuccessBG {
+  border-color: #edfdd9;
 }
 
 .bg--stateSuccess {
@@ -2535,6 +2623,10 @@ body > svg {
   fill: #5da600;
 }
 
+.bor--stateSuccess {
+  border-color: #5da600;
+}
+
 .bg--stateWarningBG {
   background: #ffedd8;
 }
@@ -2547,6 +2639,10 @@ body > svg {
   fill: #ffedd8;
 }
 
+.bor--stateWarningBG {
+  border-color: #ffedd8;
+}
+
 .bg--stateWarning {
   background: #ff8a00;
 }
@@ -2557,6 +2653,26 @@ body > svg {
 
 .icon--stateWarning {
   fill: #ff8a00;
+}
+
+.bor--stateWarning {
+  border-color: #ff8a00;
+}
+
+.bg--border {
+  background: #dcdfe8;
+}
+
+.type--border {
+  color: #dcdfe8;
+}
+
+.icon--border {
+  fill: #dcdfe8;
+}
+
+.bor--border {
+  border-color: #dcdfe8;
 }
 
 .bg-h--mark:hover {
@@ -2957,6 +3073,22 @@ body > svg {
 
 .bor-h--stateWarning:hover {
   border-color: #e67c00;
+}
+
+.bg-h--border:hover {
+  background: #cdd1de;
+}
+
+.type-h--border:hover {
+  color: #cdd1de;
+}
+
+.icon-h--border:hover {
+  fill: #cdd1de;
+}
+
+.bor-h--border:hover {
+  border-color: #cdd1de;
 }
 
 .shadow-sm {
@@ -3870,6 +4002,63 @@ a:visiter {
 .dropdown-menu__el:hover {
   background: $graySnow;
   color: #111;
+}
+
+.br-8 {
+  border-radius: 8px;
+}
+
+.br-10 {
+  border-radius: 10px;
+}
+
+.br-20 {
+  border-radius: 20px;
+}
+
+.br-round {
+  border-radius: 50%;
+}
+
+.bor {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.bor-t {
+  border-top-width: 1px;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-style: solid;
+}
+
+.bor-b {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 1px;
+  border-left-width: 0;
+  border-style: solid;
+}
+
+.bor-b-dashed {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 1px;
+  border-left-width: 0;
+  border-style: dashed;
+}
+
+.bor-r {
+  border-top-width: 0;
+  border-right-width: 1px;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-style: solid;
+}
+
+.bor-l {
+  border-left: 1px;
 }
 
 /* block footer*/
@@ -14161,6 +14350,10 @@ body {
 
   .sm__icon--100 img {
     width: 100%;
+  }
+
+  .sm__br-0 {
+    border-radius: 0;
   }
 
   .modal {

@@ -229,3 +229,50 @@ for $listBrItem in $listBr
 // drop === end
 
 
+// calc border size
+for $listBrItem in $listBr
+	.br-{$listBrItem}
+		border-radius $listBrItem px
+
+.sm__br-0
+	+below(640px)
+		br(0)
+
+.br-round
+	border-radius 50%
+
+.bor
+	border-width 1px
+	border-style solid
+
+.bor-t
+	border-top-width 1px
+	border-right-width 0
+	border-bottom-width 0
+	border-left-width 0
+	border-style solid
+
+.bor-b
+	border-top-width 0
+	border-right-width 0
+	border-bottom-width 1px
+	border-left-width 0
+	border-style solid
+
+.bor-b-dashed
+	border-top-width 0
+	border-right-width 0
+	border-bottom-width 1px
+	border-left-width 0
+	border-style dashed
+
+.bor-r
+	border-top-width 0
+	border-right-width 1px
+	border-bottom-width 0
+	border-left-width 0
+	border-style solid
+
+.bor-l
+	border-left 1px
+// calc border size === end
